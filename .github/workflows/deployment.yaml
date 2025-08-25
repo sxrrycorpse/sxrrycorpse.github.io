@@ -9,4 +9,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      id: deployment
       uses: actions/deploy-pages@v4
