@@ -5,21 +5,10 @@ on:
   push:
       branches: ["main"]
 
-permissions:
-  id-token: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-
-      - name: upload-artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
       - name: pages-deployment
         uses: actions/deploy-pages@v4
