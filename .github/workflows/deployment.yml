@@ -18,5 +18,8 @@ jobs:
       url: ${{ steps.deployment.output.page_url }}
 
     steps:
+      - name: upload-artifacts
+        uses: actions/upload-artifact@4
+
       - name: pages-deployment
         uses: actions/deploy-pages@v4
