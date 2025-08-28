@@ -16,5 +16,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: upload-artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          patch: '.'
+
       - name: pages-deployment
         uses: actions/deploy-pages@v4
